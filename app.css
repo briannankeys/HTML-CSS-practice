@@ -1,0 +1,40 @@
+	h1 {
+		color: rgb(0,200,100,0.8); 
+/*		border-color: purple;
+		border-width: 5px;
+		border-style: solid;*/
+	
+	border: 8px dashed rgb(255,100,80);
+
+}
+
+
+	h4 {
+		background: rgb(255,100.80);
+	}
+
+	body {
+		background: pink;
+/*		background: url(https://i.pinimg.com/originals/b6/07/95/b60795007716db1797bf6245dda97361.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;*/
+	}
+
+	li {
+		color: green;
+	}
+
+ h1 {
+ 	color: #FF8000;
+ }
+
+ h1 {
+ 	color: rgb(0,255,0);
+ }
+
+ h1 {
+ 	color: rgba(11, 99, 150, 1);
+ 
+
+ /*Just like rgb, but with an alpha (transparency) channel. 
+ Ranges from 0.0 to 0.2*/
