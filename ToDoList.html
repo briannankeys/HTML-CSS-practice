@@ -4,13 +4,44 @@
 	<title>To Do List</title>
 	<link rel="stylesheet" type="text/css" href="todos.css">
 
+	<script type="text/javascript">
+		
+		const addListItem = () => {
+		console.log("This is JavaScript speaking. The button has just been clicked.")
+
+			let myList = document.getElementById("myList");
+
+		console.log("This is JavaScript speaking. I have found the myList element, and here it is:" + myList)
+
+
+			let newItem = document.createElement("li");
+
+		console.log("This is JavaScript speaking. I have created an li element, but I haven't appended it yet.")
+
+			let userInput = document.getElementById("userInput");
+
+		console.log("This is JavaScript speaking. I have found the userInput element. Here is what the user inputted:" + userInput.value)
+			newItem.innerText = userInput.value;
+
+
+			myList.appendChild(newItem);
+
+		console.log("This is JavaScript speaking. I have successfully appended it. Now I'm going to clear out the input field.")
+
+			userInput.value = "";
+
+		console.log("This is JavaScript speaking. Input field is clear. Function complete. Exiting.")
+
+		}
+
+	</script>
 
 </head>
 <body>
 
 <h1>To Do List</h1>
 
-<ul>
+<ul id="myList">
 	<li class="completed"> <input type= "checkbox" checked> 
 		Walk Rusty
 	</li>
@@ -22,6 +53,10 @@
 		Finish recording video
 	</li>
 </ul>
+
+<input id="userInput" type="text" name="New List Item">
+
+<button onclick="addListItem()">Add List Item</button>
 
 </body>
 </html>
