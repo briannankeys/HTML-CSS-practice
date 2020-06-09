@@ -21,17 +21,20 @@
 		// console.log("This is JavaScript speaking. I have created an li element, but I haven't appended it yet.")
 
 			let userInput = document.getElementById("userInput");
+			let deadline = document.getElementById("Deadline");
+
 
 		// console.log("This is JavaScript speaking. I have found the userInput element. Here is what the user inputted:" + userInput.value)
 
 			newItem.innerText = userInput.value;
-
+			newItem.innerText = userInput.value + " the deadline is: " + deadline.value
 
 			myList.appendChild(newItem);
 
 		// console.log("This is JavaScript speaking. I have successfully appended it. Now I'm going to clear out the input field.")
 
 			userInput.value = "";
+			deadline.value = "";
 
 		// console.log("This is JavaScript speaking. Input field is clear. Function complete. Exiting.")
 
@@ -50,6 +53,7 @@
 </ul>
 
 <input id="userInput" type="text" name="New List Item">
+<input id="Deadline" type="text" name="Deadline">
 
 <button onclick="addListItem()">Add List Item</button>
 
@@ -60,7 +64,7 @@
 	savedToDos.forEach((toDo) => {
 		let myList = document.getElementById("myList");
 		let newItem = document.createElement("li");
-		newItem.innerText = toDo.text;
+		newItem.innerText = toDo.text + " the deadline is: " + toDo.deadline; 
 		myList.appendChild(newItem);
 	})
 
