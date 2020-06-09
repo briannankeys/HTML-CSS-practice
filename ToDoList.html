@@ -6,6 +6,8 @@
 
 	<script type="text/javascript">
 		
+		
+
 		const addListItem = () => {
 		// console.log("This is JavaScript speaking. The button has just been clicked.")
 
@@ -50,6 +52,22 @@
 <input id="userInput" type="text" name="New List Item">
 
 <button onclick="addListItem()">Add List Item</button>
+
+<script type="text/javascript">
+	
+	let savedToDos = [{text: "Walk the dog", deadline: "Monday"},{text: "Do the laundry", deadline: "Tuesday"},{text: "Clean the floor", deadline: "Wednesday"},{text: "Do the dishes", deadline: "Thursday"},{text: "Watch tv", deadline: "Friday"}]
+
+	savedToDos.forEach((toDo) => {
+		let myList = document.getElementById("myList");
+		let newItem = document.createElement("li");
+		newItem.innerText = toDo.text;
+		myList.appendChild(newItem);
+	})
+
+
+
+</script>
+
 
 </body>
 </html>
