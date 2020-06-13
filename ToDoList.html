@@ -10,15 +10,18 @@
 			let newItem = document.createElement("li");
 			let userInput = document.getElementById("userInput");
 			let deadline = document.getElementById("Deadline");
+			let checkBox = document.createElement("input"); 
+			checkBox.type = "checkbox"; 
+		    newItem.appendChild(checkBox)
+		    let listText = document.createElement("span")
 
-			addToPage(myList, newItem, userInput, deadline)	
-		}
-
-		const addToPage = (w, x, y, z) => {
-			x.innerText = y.value + " the deadline is: " + z.value
-			w.appendChild(x);
-			y.value = "";
-			z.value = "";
+	
+		
+			listText.innerText = userInput.value + " the deadline is: " + deadline.value
+			newItem.appendChild(listText);
+			myList.appendChild(newItem);
+			userInput.value = "";
+			deadline.value = "";
 		}
 
 	</script>
