@@ -23,10 +23,8 @@
                         myList.appendChild(newItem);
                 }
 
-                const clearFields = (fields) => {
-                        fields.forEach((field) => {
-                                field.value = "";
-                        })
+                const clearField = (field) => {
+                        field.value = "";
                 }
 
 		const addListItem = () => {
@@ -36,7 +34,8 @@
 
                         addTodo(newTodo, false);
 
-                        clearFields([userInput, deadline]);
+                        clearField(userInput);
+                        clearField(deadline);
 		}
 
 	</script>
