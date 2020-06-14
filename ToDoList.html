@@ -13,8 +13,8 @@
                         let myList = document.getElementById("myList");
                         let newItem = document.createElement("li");
                         let checkBox = document.createElement("input"); 
-                        checkBox.type = "checkbox"; 
-                        checkBox.checked = toDo.finished
+                        checkBox.type = "checkbox";
+                        checkBox.checked = checked || toDo.finished
                         newItem.appendChild(checkBox)
                         let listText = document.createElement("span")
 
